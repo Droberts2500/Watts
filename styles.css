@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Car Detailing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>ShineOn Wheels</h1>
+    <p>Mobile Car Detailing Service</p>
+  </header>
+
+  <section id="services">
+    <h2>Our Packages</h2>
+    <ul>
+      <li><strong>Basic Wash</strong> – $40</li>
+      <li><strong>Premium Interior + Exterior</strong> – $80</li>
+      <li><strong>Full Detail</strong> – $150</li>
+    </ul>
+  </section>
+
+  <section id="booking">
+    <h2>Book a Service</h2>
+    <form id="booking-form">
+      <label>Name: <input type="text" required /></label>
+      <label>Email: <input type="email" required /></label>
+      <label>Phone: <input type="tel" required /></label>
+      <label>Service:
+        <select required>
+          <option value="basic">Basic Wash - $40</option>
+          <option value="premium">Premium - $80</option>
+          <option value="full">Full Detail - $150</option>
+        </select>
+      </label>
+      <label>Service Address: <input type="text" required /></label>
+      <label>Preferred Date & Time: <input type="datetime-local" required /></label>
+
+      <div class="payment-buttons">
+        <button type="button" onclick="payWithStripe()">Pay with Stripe</button>
+        <div id="paypal-button-container"></div>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ShineOn Wheels</p>
+  </footer>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+  <script src="script.js"></script>
+</body>
+</html>
